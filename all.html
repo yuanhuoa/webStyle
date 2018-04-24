@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <title>loading</title>
     <link rel="stylesheet" type="text/css" href="css/loading.css"/>
-    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="js/insert.js"></script>
 </head>
 <body>
 <div style="margin: 0 auto;width: 1050px;border: 1px gainsboro solid">
@@ -24,6 +22,32 @@
     </ul>
     <br/>
 
+    <h3>3.数组的基本操作</h3>
+    <ul style="list-style: none;">
+        <li><strong>1.join方法可以将数组中的元素以特定的字符连接起来,即数组-->string</strong></li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;["a","b","c","d","e","f"]点击以<input type="text" style="width: 20px;" id="connector">连接
+            <input type="button" id="connectors" value="点击"><span style="margin-left: 10px;color: #ff8401;" id="conJoin"></span>
+        </li>
+        <li style="margin-top: 7px;"><strong>2.pop方法会移除数组中的最后一个元素并将该元素返回，原数组改为移除最后一个元素后的数组</strong></li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;["a","b","c","d","e","f"]点击以删除数组最后一个元素：<span style="color: #ff8401;" id="connectorPop"></span>
+            <input type="button" id="connectorsPop" value="点击"><span style="margin-left: 10px;color: #ff8401;" id="conPop"></span>
+        </li>
+        <li style="margin-top: 7px;"><strong>3.shift方法会移除数组中的第一个元素并将其返回，原数组改为移除第一个元素后的数组</strong></li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;["a","b","c","d","e","f"]点击以删除数组第一个元素：<span style="color: #ff8401;" id="connectorDel"></span>
+            <input type="button" id="connectorsDel" value="点击"><span style="margin-left: 10px;color: #ff8401;" id="conDel"></span>
+        </li>
+        <li style="margin-top: 7px;"><strong>4.unshift方法会在数组的前面添加元素，可以同时接收多个参数，用逗号隔开,并返回新数组的长度</strong></li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;["a","b","c","d","e","f"]点击在数组开始增加<input style="color: #ff8401;" id="connectorAdd">
+            <input type="button" id="connectorsAdd" value="点击"><span style="margin-left: 10px;color: #ff8401;" id="conAdd"></span>
+        </li>
+    </ul>
+    <br/>
+
+
+
 </div>
 </body>
 </html>
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/insert.js"></script>
+<script type="text/javascript" src="js/array.js"></script>
