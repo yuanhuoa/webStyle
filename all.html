@@ -4,46 +4,143 @@
     <meta charset="UTF-8">
     <title>loading</title>
     <link rel="stylesheet" type="text/css" href="css/loading.css"/>
+    <link rel="stylesheet" type="text/css" href="css/uploadFile.css"/>
+    <style>
+        .slide{
+            height: 30px;
+            width: 150px;
+            border-radius: 5px;
+            border: 1px solid gray;
+            background-color: #efefef;
+            cursor: pointer;
+        }
+        .slide:hover{
+            background-color: #ffffff;
+        }
+    </style>
 </head>
 <body>
 <div style="margin: 0 auto;width: 1050px;border: 1px gainsboro solid">
-    <h3>1.css实现加载中...</h3>
-    <div id="loader"></div>
+    <h3 style="display: inline-block;">1.css实现加载中...</h3><input type="button" value="show and hidden" class="slide">
+    <div id="loader" style="display: none"></div>
     <br/>
 
-    <h3>2.insertAdjacentHTML插入方法</h3>
-    <input type="button" value="点击插入标签开始前" id="beforeBegins">
-    <input type="button" value="点击插入标签开始后" id="afterBigins">
-    <input type="button" value="点击插入标签结束前" id="beforeEnds">
-    <input type="button" value="点击插入标签结束后" id="afterEnds">
-    <ul id="list">
-        <li>one</li>
-        <li>two</li>
-    </ul>
+    <h3 style="display: inline-block;">2.insertAdjacentHTML插入方法</h3><input type="button" value="show and hidden" class="slide">
+    <div style="display: none">
+        <input type="button" value="点击插入标签开始前" id="beforeBegins">
+        <input type="button" value="点击插入标签开始后" id="afterBigins">
+        <input type="button" value="点击插入标签结束前" id="beforeEnds">
+        <input type="button" value="点击插入标签结束后" id="afterEnds">
+        <ul id="list">
+            <li>one</li>
+            <li>two</li>
+        </ul>
+    </div>
     <br/>
 
-    <h3>3.数组的基本操作</h3>
-    <ul style="list-style: none;">
-        <li><strong>1.join方法可以将数组中的元素以特定的字符连接起来,即数组-->string</strong></li>
-        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;["a","b","c","d","e","f"]点击以<input type="text" style="width: 20px;" id="connector">连接
-            <input type="button" id="connectors" value="点击"><span style="margin-left: 10px;color: #ff8401;" id="conJoin"></span>
-        </li>
-        <li style="margin-top: 7px;"><strong>2.pop方法会移除数组中的最后一个元素并将该元素返回，原数组改为移除最后一个元素后的数组</strong></li>
-        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;["a","b","c","d","e","f"]点击以删除数组最后一个元素：<span style="color: #ff8401;" id="connectorPop"></span>
-            <input type="button" id="connectorsPop" value="点击"><span style="margin-left: 10px;color: #ff8401;" id="conPop"></span>
-        </li>
-        <li style="margin-top: 7px;"><strong>3.shift方法会移除数组中的第一个元素并将其返回，原数组改为移除第一个元素后的数组</strong></li>
-        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;["a","b","c","d","e","f"]点击以删除数组第一个元素：<span style="color: #ff8401;" id="connectorDel"></span>
-            <input type="button" id="connectorsDel" value="点击"><span style="margin-left: 10px;color: #ff8401;" id="conDel"></span>
-        </li>
-        <li style="margin-top: 7px;"><strong>4.unshift方法会在数组的前面添加元素，可以同时接收多个参数，用逗号隔开,并返回新数组的长度</strong></li>
-        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;["a","b","c","d","e","f"]点击在数组开始增加<input style="color: #ff8401;" id="connectorAdd">
-            <input type="button" id="connectorsAdd" value="点击"><span style="margin-left: 10px;color: #ff8401;" id="conAdd"></span>
-        </li>
-    </ul>
+    <h3 style="display: inline-block;">3.数组的基本操作</h3><input type="button" value="show and hidden" class="slide">
+    <div style="display: none">
+        <ul style="list-style: none;">
+            <li><strong>1.join方法可以将数组中的元素以特定的字符连接起来,即数组-->string</strong></li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;["a","b","c","d","e","f"]点击以<input type="text" style="width: 20px;" id="connector">连接
+                <input type="button" id="connectors" value="点击"><span style="margin-left: 10px;color: #ff8401;" id="conJoin"></span>
+            </li>
+            <li style="margin-top: 7px;"><strong>2.pop方法会移除数组中的最后一个元素并将该元素返回，原数组改为移除最后一个元素后的数组</strong></li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;["a","b","c","d","e","f"]点击以删除数组最后一个元素：<span style="color: #ff8401;" id="connectorPop"></span>
+                <input type="button" id="connectorsPop" value="点击"><span style="margin-left: 10px;color: #ff8401;" id="conPop"></span>
+            </li>
+            <li style="margin-top: 7px;"><strong>3.shift方法会移除数组中的第一个元素并将其返回，原数组改为移除第一个元素后的数组</strong></li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;["a","b","c","d","e","f"]点击以删除数组第一个元素：<span style="color: #ff8401;" id="connectorDel"></span>
+                <input type="button" id="connectorsDel" value="点击"><span style="margin-left: 10px;color: #ff8401;" id="conDel"></span>
+            </li>
+            <li style="margin-top: 7px;"><strong>4.unshift方法会在数组的前面添加元素，可以同时接收多个参数，用逗号隔开,并返回新数组的长度</strong></li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;["a","b","c","d","e","f"]点击在数组开始增加<input style="color: #ff8401;" id="connectorAdd">
+                <input type="button" id="connectorsAdd" value="点击"><span style="margin-left: 10px;color: #ff8401;" id="conAdd"></span>
+            </li>
+
+            <li style="margin-top: 10px;"><strong>5.forEach进行数组遍历:forEach()方法对数组的每个元素执行一次提供的函数。总是返回undefined；</strong></li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[1,2,3,4,5,6]点击在数组+1
+                <input type="button" id="forEachArray" value="点击"><span style="margin-left: 10px;color: #ff8401;" id="forEachArraySpan"></span>
+            </li>
+            <li style="margin-top: 7px;"><strong>6.map() 方法创建一个新数组，其结果是该数组中的每个元素都调用一个提供的函数后返回的结果。返回值是一个新的数组；</strong></li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[1,2,3,4,5,6]点击在数组+1
+                <input type="button" id="mapArray" value="点击"><span style="margin-left: 10px;color: #ff8401;" id="mapArraySpan"></span>
+            </li>
+        </ul>
+    </div>
     <br/>
 
+    <h3 style="display: inline-block;">4.文件上传样式...</h3><input type="button" value="show and hidden" class="slide">
+    <div style="display: none">
+        <div>
+            <label class="input-file-label"><input class="input-file-none" readonly id="input-name"></label>
+            <input type="file" id="uploadFile" class="input-file" multiple="true">  <!--mulitiple属性控制是否允许上传多个文件-->
+            <span id="delFile" class="delFile">×</span>
+            <span class="input-file-span" id="uploadFileSpan">upload..</span>
+        </div>
+    </div>
+    <br/>
 
+    <h3 style="display: inline-block;">5. 图片懒加载...</h3><input type="button" value="show and hidden" class="slide">
+    <div class="container">
+        <p>测试性配文，测试图片懒加载</p>
+        <p>测试性配文，测试图片懒加载</p>
+        <p>测试性配文，测试图片懒加载</p>
+        <p>测试性配文，测试图片懒加载</p>
+        <p>测试性配文，测试图片懒加载</p>
+        <p>测试性配文，测试图片懒加载</p>
+        <p>测试性配文，测试图片懒加载</p>
+        <p>测试性配文，测试图片懒加载</p>
+        <p>测试性配文，测试图片懒加载</p>
+        <p>测试性配文，测试图片懒加载</p>
+        <p>测试性配文，测试图片懒加载</p>
+        <img src="" alt="" class="lazy-img" data-src="images/img1.jpg">
+        <p>测试性配文，测试图片懒加载</p>
+        <p>测试性配文，测试图片懒加载</p>
+        <p>测试性配文，测试图片懒加载</p>
+        <p>测试性配文，测试图片懒加载</p>
+        <p>测试性配文，测试图片懒加载</p>
+        <p>测试性配文，测试图片懒加载</p>
+        <p>测试性配文，测试图片懒加载</p>
+        <p>测试性配文，测试图片懒加载</p>
+        <img src="" alt="" class="lazy-img" data-src="images/img2.jpg">
+        <p>测试性配文，测试图片懒加载</p>
+        <p>测试性配文，测试图片懒加载</p>
+        <p>测试性配文，测试图片懒加载</p>
+        <p>测试性配文，测试图片懒加载</p>
+        <p>测试性配文，测试图片懒加载</p>
+        <p>测试性配文，测试图片懒加载</p>
+        <p>测试性配文，测试图片懒加载</p>
+        <p>测试性配文，测试图片懒加载</p>
+        <img src="" alt="" class="lazy-img" data-src="images/img3.jpg">
+        <p>测试性配文，测试图片懒加载</p>
+        <p>测试性配文，测试图片懒加载</p>
+        <p>测试性配文，测试图片懒加载</p>
+        <p>测试性配文，测试图片懒加载</p>
+        <p>测试性配文，测试图片懒加载</p>
+        <p>测试性配文，测试图片懒加载</p>
+        <p>测试性配文，测试图片懒加载</p>
+        <p>测试性配文，测试图片懒加载</p>
+        <img src="" alt="" class="lazy-img" data-src="images/img4.jpg">
+        <p>测试性配文，测试图片懒加载</p>
+        <p>测试性配文，测试图片懒加载</p>
+        <p>测试性配文，测试图片懒加载</p>
+        <p>测试性配文，测试图片懒加载</p>
+        <p>测试性配文，测试图片懒加载</p>
+        <p>测试性配文，测试图片懒加载</p>
+        <p>测试性配文，测试图片懒加载</p>
+        <p>测试性配文，测试图片懒加载</p>
+        <img src="" alt="" class="lazy-img" data-src="images/img5.jpg">
+        <p>测试性配文，测试图片懒加载</p>
+        <p>测试性配文，测试图片懒加载</p>
+        <p>测试性配文，测试图片懒加载</p>
+        <p>测试性配文，测试图片懒加载</p>
+        <p>测试性配文，测试图片懒加载</p>
+        <p>测试性配文，测试图片懒加载</p>
+        <p>测试性配文，测试图片懒加载</p>
+        <p>测试性配文，测试图片懒加载</p>
+        <img src="" alt="" class="lazy-img" data-src="images/img6.jpg">
+    </div>
 
 </div>
 </body>
@@ -51,3 +148,13 @@
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="js/insert.js"></script>
 <script type="text/javascript" src="js/array.js"></script>
+<script type="text/javascript" src="js/uploadFile.js"></script>
+<script type="text/javascript" src="js/getImage.js"></script>
+<script type="text/javascript">
+    $(function(){
+        //点击显示隐藏
+        $(".slide").click(function () {
+            $(this).next().slideToggle("fast")
+        })
+    })
+</script>
