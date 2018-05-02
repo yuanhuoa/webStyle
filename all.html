@@ -5,6 +5,7 @@
     <title>loading</title>
     <link rel="stylesheet" type="text/css" href="css/loading.css"/>
     <link rel="stylesheet" type="text/css" href="css/uploadFile.css"/>
+    <link rel="stylesheet" type="text/css" href="css/log.css"/>
     <style>
         .slide{
             height: 30px;
@@ -82,7 +83,7 @@
     <br/>
 
     <h3 style="display: inline-block;">5. 图片懒加载...</h3><input type="button" value="show and hidden" class="slide">
-    <div class="container">
+    <div style="display: none;">
         <p>测试性配文，测试图片懒加载</p>
         <p>测试性配文，测试图片懒加载</p>
         <p>测试性配文，测试图片懒加载</p>
@@ -141,6 +142,58 @@
         <p>测试性配文，测试图片懒加载</p>
         <img src="" alt="" class="lazy-img" data-src="images/img6.jpg">
     </div>
+    <br/>
+
+    <h3 style="display: inline-block;">6. label的使用...</h3><input type="button" value="show and hidden" class="slide">
+    <div style="display:none;">
+        <p>label for属性可以将input框和文字联系起来</p>
+        <label for="male">点击选中input</label><input type="checkbox" id="male"><br/>
+        <label>点击选中input<input type="checkbox"></label>
+    </div>
+    <br/>
+
+    <h3 style="display: inline-block;">7. enter键提交...</h3><input type="button" value="show and hidden" class="slide">
+    <div style="display: block;">
+        <div class="log-div">
+            <form target="rfFrame" class="log-form">
+                <div>
+                    <p class="log-title">用户名密码登录</p>
+                    <p id="log-error-p">
+                        <span id="log-error"></span>
+                    </p>
+                    <p class="log-p">
+                        <input class="log-input" type="text" id="name" placeholder="请输入手机号或邮箱">
+                        <span class="del-log" id="del-name">×</span>
+                    </p>
+                    <p class="log-p">
+                        <input class="log-input" type="password" id="psw" placeholder="密码">
+                        <span class="del-log" id="del-psw">×</span>
+                    </p>
+                    <p>
+                        <label class="log-again-span">
+                            <input type="checkbox" checked id="log-again" class="log-again">
+                            下次自动登录
+                        </label>
+                    </p>
+                    <p class="log-sub-p">
+                        <input class="log-sub" type="submit" id="sub" value="登录">
+                    </p>
+                    <p>
+                        <a href="#" class="forgot-psw">忘记密码?</a>
+                        <a href="#" class="forgot-psw forgot-right">立即注册</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+        <iframe name="rfFrame" style="display:none;"></iframe>
+    </div>
+    <br/>
+
+    <h3 style="display: inline-block;">8. 树形菜单...</h3><input type="button" value="show and hidden" class="slide">
+    <div style="display: none;">
+
+    </div>
+    <br/>
 
 </div>
 </body>
@@ -150,6 +203,7 @@
 <script type="text/javascript" src="js/array.js"></script>
 <script type="text/javascript" src="js/uploadFile.js"></script>
 <script type="text/javascript" src="js/getImage.js"></script>
+<script type="text/javascript" src="js/log.js"></script>
 <script type="text/javascript">
     $(function(){
         //点击显示隐藏
