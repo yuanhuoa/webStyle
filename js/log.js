@@ -1,10 +1,9 @@
 $(function(){
     $("#sub").click(function () {
-        $(this).attr("disabled",true);
+        console.log("sub点击实际");
         $(this).blur();
         $("#name").blur();
-        $("#psw").blur()
-        console.log("sub click")
+        $("#psw").blur();
         if($("#name").val() == ""){
             $("#name").focus();
             $("#log-error").text("请输入用户名/邮箱");
@@ -19,20 +18,22 @@ $(function(){
             $(this).attr("disabled",false);
             return;
         } else{
+            $("#sub").attr("disabled",true);
+            $("#sub").val("登录中...");
             setTimeout(function () {
                 //ajax获取结果
-                var success = true;
-                if (success){
-                    //跳转
+                if ($("#name").val() == "123" && $("#psw").val() == "123"){
+                    console.log("登陆成功");
                 } else {
+                    console.log("登陆失败");
                     $("#psw").focus();
                     $("#psw").css("border-color","#fc4343");
-                    $("#log-error").text("帐号或密码错误，请重新输入或者找回密码");
+                    $("#log-error").html("帐号或密码错误，请重新输入或者<a href=\"#\" class=\"forgot-psw\">找回密码</a>");
                 }
+                $(this).attr("disabled",false);
+                $("#sub").val("登录");
             },3000)
-            console.log("log")
         }
-        $(this).attr("disabled",false);
     })
 
     $("#name").focus(function () {
