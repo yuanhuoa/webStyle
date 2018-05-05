@@ -6,6 +6,8 @@
     <link rel="stylesheet" type="text/css" href="css/loading.css"/>
     <link rel="stylesheet" type="text/css" href="css/uploadFile.css"/>
     <link rel="stylesheet" type="text/css" href="css/log.css"/>
+    <link rel="stylesheet" type="text/css" href="css/hover.css">
+    <link rel="stylesheet" type="text/css" href="css/delay.css">
     <style>
         .slide{
             height: 30px;
@@ -153,7 +155,7 @@
     <br/>
 
     <h3 style="display: inline-block;">7. enter键提交...</h3><input type="button" value="show and hidden" class="slide">
-    <div style="display: block;">
+    <div style="display: none;">
         <div class="log-div">
             <form target="rfFrame" class="log-form">
                 <div>
@@ -189,11 +191,150 @@
     </div>
     <br/>
 
-    <h3 style="display: inline-block;">8. 树形菜单...</h3><input type="button" value="show and hidden" class="slide">
+    <h3 style="display: inline-block;">8. 悬浮黑幕...</h3><input type="button" value="show and hidden" class="slide">
     <div style="display: none;">
+        <div class="box" style="display: inline-block;">
+            <div>1234567489  hover.css</div>
+            <div>1234567489</div>
+            <div>1234567489</div>
+            <div>1234567489</div>
+            <div>1234567489</div>
+            <div class="bmbox">文字</div>
+        </div>
+
+        <img class="gray-img" src="images/img-9.png" alt="这是一个图片" title="书本  hover.css">
+
+        <div class="contain" style="display: inline-block;">
+            <ul class="contain-header">
+                <li class="contain-list" style="background: #04c3e0">
+                    <i class="role-ui-icon"></i>
+                    <span class="contain-title-left">one</span>
+                    <i class="drop-down-icon"></i>
+                    <i class="drop-down-icon2"></i>
+
+                    <div class="contain-content">
+                        <span>css 实现hover显示   hover.css</span>
+                        <span>精灵图定位</span>
+                        <i class="del-ui-icon"></i>
+                    </div>
+                </li>
+                <li class="contain-list">
+                    <i class="role-ui-icon"></i>
+                    <span class="contain-title-left">two</span>
+                    <i class="drop-down-icon"></i>
+                    <div class="contain-content">
+                        <span>two page</span>
+                        <i class="del-ui-icon"></i>
+                    </div>
+                </li>
+                <li class="contain-list">
+                    <i class="role-ui-icon"></i>
+                    <span class="contain-title-left">three</span>
+                    <i class="drop-down-icon"></i>
+                    <div class="contain-content">
+                        <span>three page</span>
+                        <i class="del-ui-icon"></i>
+                    </div>
+                </li>
+            </ul>
+
+
+        </div>
+
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <br />
+        <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <br />
+        <img id="drag1" src="images/w3.gif" draggable="true" ondragstart="drag(event)" />
+
+
 
     </div>
     <br/>
+
+    <h3 style="display: inline-block;">9. 悬停200时间内不显示...</h3><input type="button" value="show and hidden" class="slide">
+    <div style="display: block;">
+        <div class="main-contain">
+            <div>
+                <ul class="contain-ul">
+                    <li class="contain-list-logo">this is logo</li>
+                    <li id="contain-list-1" class="contain-list-li">
+                        <a class="contain-list-a" href="#">
+                            <span>Prime Video</span>
+                            <i class="drop-down-icon"></i>
+                        </a>
+                        <div id="contain-content-1" class="contain-content">
+                            <p>All Videos</p>
+                            <p>Included with Prime</p>
+                            <p>Prime Video Channels</p>
+                            <p>Rent or Buy</p>
+                            <p>Your Watchlist</p>
+                        </div>
+                    </li>
+                    <li id="contain-list-2" class="contain-list-li">
+                        <a class="contain-list-a" href="#">
+                            <span>Fire TV</span>
+                            <i class="drop-down-icon"></i>
+                        </a>
+                        <div id="contain-content-2" class="contain-content">
+                            <span>two page</span>
+                        </div>
+                    </li>
+                    <li id="contain-list-3" class="contain-list-li">
+                        <a class="contain-list-a" href="#">
+                            <span>Electronics</span>
+                            <i class="drop-down-icon"></i>
+                        </a>
+                        <div id="contain-content-3" class="contain-content">
+                            <span>three page</span>
+                            <p>Rent or Buy</p>
+                            <p>Your Watchlist</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 下拉hover -->
+            <div id="aaa" style="margin: 50px;width: 150px;">
+                <style>
+                    #aaa:hover #drop-down-div{display: block;}
+                    #drop-down-div{
+                        display: none;
+                        width: 300px;
+                        height: 200px;
+                        border: 1px solid gainsboro;
+                        background-color:white;margin-top: 10px;
+                        border-radius: 8px;
+                        box-shadow: -4px 9px 13px rgba(0, 0, 0, 0.09);
+                        position: relative;
+                    }
+                    .drop-up{
+                        position: absolute;
+                        z-index: 1;
+                        left: 20%;
+                        top: -6px;
+                        margin-left: -6px;
+                        width: 7px;
+                        height: 7px;
+                        border: solid gainsboro;
+                        border-width: 0 0 1px 1px;
+                        background: #fff;
+                        -moz-transform: rotate(135deg);
+                        -webkit-transform: rotate(135deg);
+                        transform: rotate(135deg);
+                    }
+                </style>
+                <input id="drop-down" value="下拉" type="button" class="slide">
+                <div id="drop-down-div">
+                    <i class="drop-up"></i>
+                    <p>君不见黄河远上白云间</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br/>
+
+
 
 </div>
 </body>
@@ -204,6 +345,8 @@
 <script type="text/javascript" src="js/uploadFile.js"></script>
 <script type="text/javascript" src="js/getImage.js"></script>
 <script type="text/javascript" src="js/log.js"></script>
+<script type="text/javascript" src="js/hover.js"></script>
+<script type="text/javascript" src="js/delay.js"></script>
 <script type="text/javascript">
     $(function(){
         //点击显示隐藏
