@@ -514,7 +514,7 @@
     </div>
     <br/>
 
-
+<a id="toplink">返回顶端</a>
 </div>
 </body>
 </html>
@@ -534,5 +534,8 @@
         $(".slide").click(function () {
             $(this).next().slideToggle("fast")
         })
+    })
+    $("#toplink").click(function () {
+        $('html, body').animate({scrollTop: 0}, 100)
     })
 </script>
